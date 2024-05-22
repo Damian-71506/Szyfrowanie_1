@@ -82,7 +82,7 @@ namespace Szyfrowanie_1
 
 
                     // Konwertujemy tekst jawny na byte array
-                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintextBox.Text);
+                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(asciiBox.Text);
 
                     // Szyfrujemy tekst jawny
                     byte[] encryptedBytes = aes.CreateEncryptor().TransformFinalBlock(plaintextBytes, 0, plaintextBytes.Length);
@@ -105,7 +105,7 @@ namespace Szyfrowanie_1
                     des.IV = iv;
 
                     // Konwertujemy tekst jawny na byte array
-                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintextBox.Text);
+                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(asciiBox.Text);
                     // Szyfrujemy tekst jawny
                     byte[] encryptedBytes = des.CreateEncryptor().TransformFinalBlock(plaintextBytes, 0, plaintextBytes.Length);
                     // Wyświetlanie zaszyfrowanego tekstu w postaci ASCII
@@ -125,7 +125,7 @@ namespace Szyfrowanie_1
                     rc2.IV = iv;
 
                     // Konwertujemy tekst jawny na byte array
-                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintextBox.Text);
+                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(asciiBox.Text);
                     // Szyfrujemy tekst jawny
                     byte[] encryptedBytes = rc2.CreateEncryptor().TransformFinalBlock(plaintextBytes, 0, plaintextBytes.Length);
                     // Wyświetlanie zaszyfrowanego tekstu w postaci ASCII
@@ -144,7 +144,7 @@ namespace Szyfrowanie_1
                     rijndael.IV = iv;
 
                     // Konwertujemy tekst jawny na byte array
-                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintextBox.Text);
+                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(asciiBox.Text);
                     // Szyfrujemy tekst jawny
                     byte[] encryptedBytes = rijndael.CreateEncryptor().TransformFinalBlock(plaintextBytes, 0, plaintextBytes.Length);
                     // Wyświetlanie zaszyfrowanego tekstu w postaci ASCII
@@ -163,7 +163,7 @@ namespace Szyfrowanie_1
                     tripleDES.IV = iv;
 
                     // Konwertujemy tekst jawny na byte array
-                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(plaintextBox.Text);
+                    byte[] plaintextBytes = Encoding.UTF8.GetBytes(asciiBox.Text);
                     // Szyfrujemy tekst jawny
                     byte[] encryptedBytes = tripleDES.CreateEncryptor().TransformFinalBlock(plaintextBytes, 0, plaintextBytes.Length);
                     // Wyświetlanie zaszyfrowanego tekstu w postaci ASCII
